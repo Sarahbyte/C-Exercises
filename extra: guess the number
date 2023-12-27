@@ -1,4 +1,4 @@
-// Guess the number. Conditional operator practice.
+// Guess the number
 
 #include <stdio.h>
 
@@ -8,13 +8,11 @@ int main(void)
     printf("Guess the number between 0 and 10 that I am thinking of: ");
     scanf("%d", &guess);
 
-    if (guess == num) {
+    if (guess == num) 
         printf("you got it!");
-    } else {
-        if (guess < num)
-            printf("Too low!");
-        else
-            printf("Too high!");
-    }
+    else if (guess < num)
+        printf("Too low!");
+    else
+        printf("Too high!");
     return 0;
 }
