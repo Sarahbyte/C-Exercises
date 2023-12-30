@@ -1,0 +1,28 @@
+// Finds the largest and smallest of four intergers
+#include <stdio.h>
+
+int main(void)
+{
+    int val1, val2,val3,val4, larg1, small1, larg2, small2;
+    printf("Enter four space-seperated integers: ");
+    scanf("%d %d %d %d", &val1, &val2, &val3, &val4);
+
+    if (val1 > val2) {
+        larg1 = val1;
+        small1 = val2;
+    } else {
+        larg1 = val2;
+        small1 = val1;
+    }
+    if (val3 > val4) {
+        larg2 = val3;
+        small2 = val4;
+    } else {
+        larg2 = val4;
+        small2 = val3;
+    }
+    printf("Largest: %d \n", (larg1 > larg2 ? larg1 : larg2));
+    printf("Smallest: %d", (small1 < small2 ? small1 : small2));
+
+    return 0;
+}
