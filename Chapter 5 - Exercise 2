@@ -1,0 +1,25 @@
+//Enter a time using 24 hour format [21:00] as input and it's equivalent 12 hour format will be output.
+#include <stdio.h>
+
+int main(void)
+{
+    int hour, min;
+
+    printf("Enter a 24-hour time: ");
+    scanf("%d:%d", &hour, &min);
+
+    printf("Equivalent 12-hour time: ");
+    if (min > -1 && min < 61) {
+        if (hour == 0)
+            printf("12:%.2d", min);
+        else if (hour > 0 && hour < 13)
+            printf("%.2d:%.2d", hour, min);
+        else if (hour > 12 && hour < 25)
+            printf("%.2d:%.2d", hour - 12, min);
+        else 
+            printf("Invalid Time");
+    }
+    else 
+        printf("Invalid Time");
+    return 0;
+}
