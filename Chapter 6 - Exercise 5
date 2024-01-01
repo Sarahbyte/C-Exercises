@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main (void) {
+    int x, last;
+    printf("Enter a digit to be reversed: ");
+    scanf("%d", &x);
+
+    do
+    {
+        last = x % 10;
+        x = x / 10;
+        printf("%d", last);
+    } while (x != 0);
+
+    return 0;
+    
+}
