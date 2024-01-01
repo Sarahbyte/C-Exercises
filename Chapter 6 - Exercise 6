@@ -1,0 +1,18 @@
+#Prints even squares between 1 and n, where n is a digit input by the user.
+
+#include <stdio.h>
+
+int main(void){
+    int num, square;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for (int index = 1; index <= num; index++){
+        square = index * index;
+        if (square % 2 == 0 && square < num){
+            printf("%d\n", square);
+        }
+    }
+    printf("%d", num);
+    return 0;
+}
