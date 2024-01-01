@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+    int m, n;
+    printf("Enter two integers: ");
+    scanf("%d %d", &m, &n);
+    
+    int remain;
+    while (1) {
+        if (n == 0)
+            return printf("The greatest common divisor is: %d", m);
+        remain = m % n;
+        m = n;
+        n = remain;
+    }
+    printf("%d %d", m, n);
+
+    return 0;
+
+}
